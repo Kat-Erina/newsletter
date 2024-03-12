@@ -1,24 +1,26 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import validationScheme from "../validatation-scheme";
-import { NavLink, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
+
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationScheme) });
 
   async function handleSubmitFn(data) {
-    console.log(data);
-    console.log(errors);
+    const { email } = data;
+
+    localStorage.setItem("email", JSON.stringify(email));
+    navigate("./subscribe");
   }
 
-  console.log(errors);
-
   return (
-    <form onSubmit={handleSubmit(handleSubmitFn)}>
+    <form>
       <label htmlFor="name" className="text-xs text-dark-navy font-bold">
         Name
         <span className=" float-right text-warning text-xs">
@@ -56,11 +58,12 @@ const Form = () => {
         id="email"
         {...register("email")}
       />
-      <button type="submit">
-        Click
-        {errors.name?.message == "" && (
-          <Link to={`${errors ? "/" : "/subscribe"}`}>Click</Link>
-        )}
+      <button
+        className="w-full bg-dark-navy flex justify-center py-4 mt-4 rounded-sm text-white font-bold "
+        type="button"
+        onClick={handleSubmit(handleSubmitFn)}
+      >
+        Subscribe to monthly newsletter!
       </button>
     </form>
   );
