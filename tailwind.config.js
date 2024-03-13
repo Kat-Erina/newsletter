@@ -19,6 +19,10 @@ export default {
       borderRadius: {
         large: "16px",
       },
+      backgroundImage: {
+        "mobile-image": "url(./assets/illustration-sign-up-mobile.svg)",
+        "desktop-image": "url(./assets/illustration-sign-up-desktop.svg)",
+      },
     },
   },
   plugins: [],
