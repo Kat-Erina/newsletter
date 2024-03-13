@@ -4,9 +4,9 @@ import Form from "../components/Form";
 const Newsletter = () => {
   return (
     <main className="  w-full min-h-dvh flex items-center ">
-      <section className="w-full flex flex-col md:flex-row-reverse md:w-[928px] md:h-[640px] md:gap-8 bg-white  md:px-9 md:rounded-3xl md:py-6">
+      <section className="w-full flex flex-col md:flex-row-reverse md:w-[928px] md:h-[640px] md:gap-8 bg-white  md:px-9 md:rounded-3xl md:py-6 md:pl-[60px]">
         <section className=" h-72 bg-gradient-to-b from-orange to-pink rounded-b-large md:flex-1 md:h-full md:rounded-lg "></section>
-        <section className=" bg-slate-100   px-4 py-10 md:flex-1">
+        <section className="px-4 py-10 md:flex-1 md:pl-6">
           <h1 className="text-4xl font-bold mb-6 text-dark-navy ">
             Stay Up Updated!
           </h1>
