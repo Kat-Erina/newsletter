@@ -59,7 +59,7 @@ const Form = () => {
         {...register("email")}
       />
       <button
-        className="w-full bg-dark-navy flex justify-center py-4 mt-4 rounded-sm text-white font-bold "
+        className="w-full bg-dark-navy flex justify-center py-4 mt-4 rounded-sm text-white font-bold hover:shadow-custom hover:bg-gradient-to-b from-orange to-pink"
         type="button"
         onClick={handleSubmit(handleSubmitFn)}
       >

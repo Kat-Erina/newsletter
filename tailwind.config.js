@@ -12,11 +12,10 @@ export default {
         "light-grey": "rgba(25, 24, 43, 0.25)",
         "light-warning": " rgba(255, 97, 85, 0.15);",
       },
+      boxShadow: {
+        custom: "0px 16px 32px 0px rgba(255, 97, 85, 0.50)",
+      },
 
-      // backgroundImage: {
-      //   laptop: "url('./assets/Group34.png')",
-      //   "image-94": "url('/img/./assets/Group37.png')",
-      // },
       borderRadius: {
         large: "16px",
       },
