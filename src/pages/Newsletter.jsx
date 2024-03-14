@@ -1,8 +1,7 @@
 import check from "../assets/check.png";
 import Form from "../components/Form";
-// import photo from "./assets/illustration-sign-up-mobile.svg";
 
-const Newsletter = () => {
+const Newsletter = ({ register, handleSubmit, errors, handleSubmitFn }) => {
   return (
     <main className="  w-full min-h-dvh flex items-center ">
       <section className="w-full flex flex-col md:flex-row-reverse md:w-[928px] md:h-[640px] md:gap-8 bg-white  md:px-9 md:rounded-3xl md:py-6 md:pl-[60px]">
@@ -32,7 +31,12 @@ const Newsletter = () => {
               <p className="text-base text-dark-navy">And much more!</p>
             </li>
           </ul>
-          <Form />
+          <Form
+            register={register}
+            handleSubmit={handleSubmit}
+            errors={errors}
+            handleSubmitFn={handleSubmitFn}
+          />
         </section>
       </section>
     </main>
