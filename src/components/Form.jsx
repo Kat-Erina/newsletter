@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Form = ({ register, handleSubmit, errors, handleSubmitFn }) => {
   return (
     <form onSubmit={handleSubmit(handleSubmitFn)}>
@@ -48,4 +50,10 @@ const Form = ({ register, handleSubmit, errors, handleSubmitFn }) => {
   );
 };
 
+Form.propTypes = {
+  register: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  handleSubmitFn: PropTypes.func,
+  errors: PropTypes.object,
+};
 export default Form;

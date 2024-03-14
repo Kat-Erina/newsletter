@@ -1,4 +1,5 @@
 import check from "../assets/check.png";
+import PropTypes from "prop-types";
 const Subscribe = ({ email }) => {
   return (
     <main className="w-full min-h-full md:flex md:items-center">
@@ -23,4 +24,7 @@ const Subscribe = ({ email }) => {
   );
 };
 
+Subscribe.propTypes = {
+  email: PropTypes.string,
+};
 export default Subscribe;

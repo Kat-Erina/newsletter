@@ -1,5 +1,6 @@
 import check from "../assets/check.png";
 import Form from "../components/Form";
+import PropTypes from "prop-types";
 
 const Newsletter = ({ register, handleSubmit, errors, handleSubmitFn }) => {
   return (
@@ -41,6 +42,13 @@ const Newsletter = ({ register, handleSubmit, errors, handleSubmitFn }) => {
       </section>
     </main>
   );
+};
+
+Newsletter.propTypes = {
+  register: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  handleSubmitFn: PropTypes.func,
+  errors: PropTypes.object,
 };
 
 export default Newsletter;
